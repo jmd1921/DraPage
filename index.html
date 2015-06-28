@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/jquery-1.11.3.min.js"></script>
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+        <script src="//use.typekit.net/nvf5mak.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body ng-app="surgeonApp">
+        <header>
+            <img src="media/image1.png"/>
+        </header>
+        <div id="panel" ng-controller="InfoController">
+            <nav>
+                <div id="table">
+                    <a id="main" ng-click="goToSection('home');">PRINCIPAL</a>
+                    <a id="quienes" ng-click="goToSection('quienes');">QUIENES</a>
+                    <a id="que" ng-click="goToSection('que');">QUE</a>
+                    <a id="como" ng-click="goToSection('como');">COMO</a>
+                    <a id="contacto" ng-click="goToSection('contact');">CONTACTO</a>
+                </div>
+            </nav>
+            <section>
+                <aside>
+                    <img src="media/image7.png"/>
+                    <div id="caption">{{ thisSection.imcaption }}</div>
+                </aside>
+                <article>
+                    <div id="section">
+                        <p>{{ thisSection.content }}</p>
+                        
+                    </div>
+                </article>
+                <div id="background"></div>
+            </section>
+        </div>
+        <footer>
+        </footer>
+        <!-- Main -->
+        <script src="js/app.js"></script>
+        <!-- Controllers -->
+        <script src="js/controllers/infoController.js"></script>
+        <script src="js/controllers/mainController.js"></script>
+        <!-- Directives -->
+        <script src="js/directives/directives.js"></script>
+        
+        <!-- Services -->
+        <script src="js/services/imgService.js"></script>
+        <script src="js/services/textService.js"></script>
+        
+        <!-- JS -->
+        <script src="js/index.js"></script>
+    </body>
+</html>
