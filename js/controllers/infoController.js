@@ -26,20 +26,29 @@ app.controller('InfoController',
                         imcaption:''
                     }   
     
-    $scope.getData = function(section){
+    var getData = function(section){
         var sectionData = $scope.sections.filter(function(item) { 
             return (item.name === section);})[0];
-        $scope.thisSection.imcaption = sectionData.imcaption
+        $scope.thisSection.imcaption = sectionData.imcaption;
         $scope.thisSection.rightimg = ImgService.getImage(sectionData.rightimg);
         TxtService.getTxt(sectionData.name)
             .success(function(data) { 
             $scope.thisSection.content = data; 
         });
     }
-                   
+    
+    var getMap = function () {
+        $scope.thisSection.imcaption = 'here';
+        var canvas = document.getElementById("map-canvas");
+        canvas.display = "block";        
+    }
+    
     $scope.goToSection = function(section){
         $("#section, #caption").fadeOut(0);
-        $scope.getData(section);
+        if(section === 'contacto')
+            getMap();
+        else
+            getData(section);
         $("#section, #caption").fadeIn()
     }
 }]);

@@ -7,6 +7,9 @@
         <link href="css/index.css" rel="stylesheet" type="text/css"/>
         <script src="//use.typekit.net/nvf5mak.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATr8zFkNUTVY_cq1DWC52GfnPefDUBMGc">
+        </script>
     </head>
     <body ng-app="surgeonApp">
         <header>
@@ -19,7 +22,7 @@
                     <a id="quienes" ng-click="goToSection('quienes');">QUIENES</a>
                     <a id="que" ng-click="goToSection('que');">QUE</a>
                     <a id="como" ng-click="goToSection('como');">COMO</a>
-                    <a id="contacto" ng-click="goToSection('contact');">CONTACTO</a>
+                    <a id="contacto" ng-click="goToSection('contacto');">CONTACTO</a>
                 </div>
             </nav>
             <section>
@@ -30,10 +33,11 @@
                 <article>
                     <div id="section">
                         <p>{{ thisSection.content }}</p>
-                        
+                        <div id="map-canvas"></div>
                     </div>
                 </article>
-                <div id="background"></div>
+                <div id="background">
+                </div>
             </section>
         </div>
         <footer>
@@ -42,9 +46,6 @@
         <script src="js/app.js"></script>
         <!-- Controllers -->
         <script src="js/controllers/infoController.js"></script>
-        <script src="js/controllers/mainController.js"></script>
-        <!-- Directives -->
-        <script src="js/directives/directives.js"></script>
         
         <!-- Services -->
         <script src="js/services/imgService.js"></script>

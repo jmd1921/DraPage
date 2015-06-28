@@ -84,3 +84,9 @@ aside div{
 aside, article, back-img{
     display: inline-block;
 }
+
+#map-canvas {
+    width: 100%; 
+    height: 100%;
+    display: none;
+}
