@@ -8,7 +8,7 @@ app.factory('TxtService', ['$http',
                                      return data;
                                  })
                                  .error(function(err) {
-                                     return err;
+                                     return "Lorem ipsum doloret sub amet";
                                  });
                              }
                         };

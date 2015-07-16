@@ -4,7 +4,7 @@ app.controller('InfoController',
         [   
             {
                 name:'quienes',
-                rightimg:14,
+                rightimg:1,
                 imcaption: 'fine.'
             },
             {
